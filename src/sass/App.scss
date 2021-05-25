@@ -1,0 +1,92 @@
+@import "./zmienne.scss";
+@import "./Form.scss";
+@mixin Navi-button {
+  width: 225px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  border: 3px solid black;
+  font-size: $font-size;
+}
+
+.body{
+  max-width: 450px;
+  max-height: 750px;
+  font-family: $font-family;
+  background-image: url("../Images/BG.png");
+  background-size: cover;
+}
+.App {
+  text-align: center;
+}
+//////////////// NAVI ////////////////
+.Navi{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  color: white;
+}
+.Navi-button {
+  @include Navi-button();
+  transition: 0.5s;
+}
+.Navi-button:hover{
+    color: goldenrod;
+    background-color: lightgrey;
+    transform: scale(1.15);
+}
+
+///////////////// GALERIA///////////////////
+.Gallery {
+display: flex;
+padding: 15px;
+}
+.Gallery img{
+  margin: 5px;
+  transition: 0.5s;
+}
+
+.Gallery img:hover {
+    transform:scale(1.15);
+    border: 5px solid black;
+  }
+  @media (max-width: 1024px) {
+    .Gallery {
+      display: flex;
+    }
+  }
+
+
+.homePage{
+  font-family: $font-family;
+  font-size: $font-size;
+  color: white;
+  padding: 50px;
+}
+.homePage1{
+  color: white;
+  font-family: $font-family;
+}
+///////// Oferta//////
+
+.Oferta{
+  color: white;
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+//////// KALKULATOR////////////
+.Calculator{
+  display: flex;
+}
+.walls{
+  color: white;
+  font-family: $font-family;
+  text-align: center;
+}
+.inputsCalc{
+  justify-content: center;
+  align-items: center;
+}
