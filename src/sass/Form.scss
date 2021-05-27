@@ -26,10 +26,17 @@
   }
   input {
     display: flex;
-    height: 50px;
-    width: 200px;
+    height: 70px;
+    width: 260px;
     justify-content: center;
-    
+    text-align: center;
+  }
+  .formularz{
+    color: white;
+    font-size: $font-size;
+    text-align: center;
+    justify-content: center;
+    font-family: $font-family;
   }
   input::placeholder {
     color: black;

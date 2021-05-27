@@ -12,7 +12,14 @@ function Oferta() {
         <li>MALOWANIE, DEKORACJE</li>
         <li>DRZWI I OKNA</li>
         <li>BIAŁY MONTAŻ -  ŁAZIENKA</li>
+        <li>PRACE ROZBIÓRKOWE</li>
+        <li>SUCHE TYNKI I SUFITY PODWIESZANE</li>
+        <li>PŁYTY I ŚCIANKI G - K, ZABUDOWY</li>
+        <li>INSTALACJE ELEKTRYCZNE</li>
+        <li>INSTALACJE WOD. - KAN.</li>
       </ul>
+      <h1>INNE PRACE</h1>
+      <p>Masz pytanie o inny zakres prac? Twoje zlecenie jest nieszablonowe? Zapraszamy do kontaktu! </p>
     </div>
   );
 }

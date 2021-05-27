@@ -9,20 +9,7 @@ const Form = () => {
     email:"",
     select: "Pan"
   });
-  db.collection("Users").doc("Users").set({
-    select: inputs.select,
-    name: inputs.userName,
-    surname: inputs.surname,
-    
-    email: inputs.email,
-    
-})
-.then(() => {
-    console.log("Wysłano!");
-})
-.catch((error) => {
-    console.error("Error: ", error);
-});
+ 
   const [number, setNumber] = useState("");
   const [error, setError] = useState();
   
@@ -56,10 +43,28 @@ const Form = () => {
       setError("Wpisany adres e-mail jest za krótki");
       return;
     }
-  }
+    if(number.length < 9){
+      setError("Podany numer jest za krótki!");
+      return;
+    }
+    db.collection("Users").add({
+      select: inputs.select,
+      name: inputs.userName,
+      surname: inputs.surname,
+      email: inputs.email,
+  })
+  .then(() => {
+      console.log("Wysłano!");
+  })
+  .catch((error) => {
+      console.error("Error: ", error);
+    });
+    }
+    
   
   return (
-    <div className= "">
+    <div>
+      <h1 className="formularz">Zostaw nam swoje dane a my skontaktujemy się z Tobą w ciągu kilku godzin!</h1>
     <form onSubmit={handleSubmit} className="formularz">
       { error && <p style={{color:"red"}}>{error}</p>}
   <select className="selector"
