@@ -58,6 +58,7 @@ padding: 15px;
   @media (max-width: 500px) {
     .Gallery {
       display: flex;
+      flex-direction: column;
     }
   }
 
@@ -83,17 +84,21 @@ padding: 15px;
 //////// KALKULATOR////////////
 .container {
   padding: 15px;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .Wynik {
   font-family: $font-family;
+  flex-direction: column;
   color: white;
-  display: flexbox;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 .inputCalc{
-
+  align-self: center;
   }
  
   ////////// Footer //////////
