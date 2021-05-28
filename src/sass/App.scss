@@ -1,5 +1,8 @@
 @import "./zmienne.scss";
 @import "./Form.scss";
+* {
+  box-sizing: border-box;
+}
 @mixin Navi-button {
   width: 225px;
   height: 50px;
@@ -52,9 +55,10 @@ padding: 15px;
     transform:scale(1.15);
     border: 5px solid black;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 500px) {
     .Gallery {
       display: flex;
+      flex-direction: column;
     }
   }
 
@@ -78,15 +82,34 @@ padding: 15px;
 }
 
 //////// KALKULATOR////////////
-.Calculator{
+.container {
+  padding: 15px;
   display: flex;
-}
-.walls{
-  color: white;
-  font-family: $font-family;
-  text-align: center;
-}
-.inputsCalc{
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
+.Wynik {
+  font-family: $font-family;
+  flex-direction: column;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputCalc{
+  align-self: center;
+  }
+ 
+  ////////// Footer //////////
+  .footer_container{
+    padding:40px;
+  }
+  .footer__info{
+    color: white;
+    border-top: 4px solid white;
+    padding: 15px;
+    justify-items: center;
+  }
+
+
